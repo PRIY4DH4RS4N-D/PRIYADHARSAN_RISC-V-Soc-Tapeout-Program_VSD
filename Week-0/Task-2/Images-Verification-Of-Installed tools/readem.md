@@ -41,7 +41,7 @@ sudo make install
 ```bash
 yosys
 ```
-<img src="./Week-0/Task-2/Images-Verification-Of-Installedtools/1-Yosys.png" alt="Yosys verification" width="72%" />
+<img src="./1-Yosys.png" alt="Yosys verification" width="72%" />
 
 ---
 
@@ -56,7 +56,7 @@ sudo apt-get install iverilog
 ```bash
 iverilog
 ```
-<img src="./images/iverilog_verify.png" alt="Icarus Verilog verification" width="72%" />
+<img src="./2-Iverilog.png" alt="Icarus Verilog verification" width="72%" />
 
 ---
 
@@ -71,7 +71,7 @@ sudo apt install gtkwave
 ```bash
 gtkwave
 ```
-<img src="./images/gtkwave_verify.png" alt="GTKWave verification" width="72%" />
+<img src="./3-Gtkwave.png" alt="GTKWave verification" width="72%" />
 
 ---
 
@@ -91,7 +91,7 @@ sudo make install
 ```bash
 ngspice
 ```
-<img src="./images/ngspice_verify.png" alt="Ngspice verification" width="72%" />
+<img src="./4-ngspice.png" alt="Ngspice verification" width="72%" />
 
 ---
 
@@ -117,7 +117,7 @@ make install
 ```bash
 magic
 ```
-<img src="./images/magic_verify.png" alt="Magic VLSI verification" width="72%" />
+<img src="./5-Magic.png" alt="Magic verification" width="72%" />
 
 ---
 
