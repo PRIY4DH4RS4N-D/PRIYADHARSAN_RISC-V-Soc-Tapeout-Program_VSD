@@ -1,0 +1,33 @@
+VSD RISC-V Tapeout Program – Document
+Summary
+Instructor: Kunal Ghosh (VSD - VLSI System Design)
+Topic: RISC-V Tapeout Flow and SoC Integration
+1. Chip Modelling & RTL Flow
+O1: Specification (C Model)
+• System specification is defined in C language.
+• Testbenches are also written in C.
+O2: RTL Architecture (Soft Copy of Hardware in Verilog)
+• Hardware is described at RTL using Verilog.
+• Processor + Peripherals/IPs are modeled in RTL.
+O3: SoC Integration
+• Integration of processor, peripherals, analog/digital IPs.
+• Gate-level netlist generated after synthesis.
+• Analog IPs and macros hardened as hard macros (HM).
+ASIC Flow → Synthesis → RTL2GDS
+• Steps include synthesis, floorplanning, placement, CTS, routing.
+• Generates GDSII, which undergoes DRC/LVS checks.
+2. Final SoC & Application
+O4: Final Chip Realization
+• SoC works at real frequencies (100–130 MHz).
+• Same C testbench is reused for validation.
+• O1 = O2 = O3 = O4 ensures consistency.
+Applications & Boards
+• iWatch (wearables).
+• Arduino boards (development).
+• TV panels (consumer electronics).
+• AC applications (embedded controllers).
+3. Key Takeaways
+Unified C testbench ensures consistency.
+SoC design flow: C spec → RTL (Verilog) → SoC → GDSII.
+Verification at each stage ensures correctness.
+RISC-V SoCs are applied in real consumer & industrial devices.
