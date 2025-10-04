@@ -70,7 +70,7 @@ VSDBabySoC is a compact, educational SoC featuring:
 
 **Purpose:** Validate open-source IPs and demonstrate digital-to-analog signal control.
 
-![ARCHITECTURE](images/ARCHI.png)
+![ARCHITECTURE](./IMAGES/ARCHI.png)
 
 ---
 
