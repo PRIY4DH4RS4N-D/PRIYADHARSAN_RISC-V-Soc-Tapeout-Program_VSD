@@ -6,8 +6,7 @@
 ██║     ██║  ██║██║██████╔╝██║  ██║╚██████╔╝
 ╚═╝     ╚═╝  ╚═╝╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝
 -->
-<div align="center">
-  
+
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=105&section=header&text=%20VSDBabySoC%20Project%20Guide%20VSD&fontSize=38&fontAlign=50&fontColor=F7F7F7" width="100%">
 
 ## 🧠 What is a System-on-Chip (SoC)?
@@ -70,7 +69,7 @@ VSDBabySoC is a compact, educational SoC featuring:
 
 **Purpose:** Validate open-source IPs and demonstrate digital-to-analog signal control.
 
-![ARCHITECTURE](./IMAGES/ARCHI.png)
+<img src="./IMAGES/ARCHI.png" alt="ARCHITECTURE" width="550">
 
 ---
 
@@ -145,7 +144,8 @@ View results in GTKWave:
 ```bash
 gtkwave output/pre_synth_sim/pre_synth_sim.vcd
 ```
-![Waveform Analysis](./IMAGES/PRESYNTH.png)
+<img src="./IMAGES/PRESYNTH.png" alt="Waveform Analysis" width="550">
+
 ### 🚦 Key Signals
 
 - `clk` – PLL clock output
@@ -228,5 +228,3 @@ Currently, the CPU instructions are hardcoded. The next goal is to create a firm
 - [SoC Fundamentals (Hemanth Kumar)](https://github.com/hemanthkumardm/SFAL-VSD-SoC-Journey/blob/main/11.%20Fundamentals%20of%20SoC%20Design/README.md)
 - [VSD SoC Journey – Spatha](https://github.com/spatha0011/spatha_vsd-hdp/tree/main/Day5)
 - [VSDBabySoC (Manili)](https://github.com/manili/VSDBabySoC)
-
----
