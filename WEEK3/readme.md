@@ -1,4 +1,15 @@
-# ⚡️ Gate-Level Simulation (GLS) & Static Timing Analysis of BabySoC ⚡️
+
+<!--
+██████╗ ██████╗ ██╗██████╗  █████╗ ██╗   ██╗
+██╔══██╗██╔══██╗██║██╔══██╗██╔══██╗██║   ██║
+██████╔╝██████╔╝██║██║  ██║███████║██║   ██║
+██╔═══╝ ██╔══██╗██║██║  ██║██╔══██║██║   ██║
+██║     ██║  ██║██║██████╔╝██║  ██║╚██████╔╝
+╚═╝     ╚═╝  ╚═╝╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝
+-->
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=105&section=header&text=⚡️GLS_AND_STA_OF_BABY_SOC&fontSize=38&fontAlign=50&fontColor=F7F7F7" width="100%">
+<p align="center">⚡️ GATE LEVEL SIMULATION AND STATIC TIMING ANALYSIS IN BABYSOC ⚡️</p>
 
 <p align="center">
   <b>🧩 Post-Synthesis Functional Verification</b><br>
@@ -39,8 +50,8 @@ read_liberty -lib ./src/lib/avsddac.lib        # DAC cell library
 read_liberty -lib ./src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib  # Sky130 standard cell library
 ```
 
-<img src="./IMAGES/yosys_setup.png" alt="setup" width="550">
-<img src="./IMAGES/avsdpll_avspddac_.png.png" alt="setup" width="550">
+<img src="./IMAGES/yosys_setup.png"  width="550">
+<img src="./IMAGES/avsdpll_avsdpddac_.png" width="550">
 
 ---
 
@@ -100,7 +111,6 @@ rename -enumerate
 
 ### 🧾 Step 6: Reporting and Writing Output
 
-```bash
 stat
 write_verilog -noattr ./output/post_synth_sim/vsdbabysoc.synth.v
 
@@ -119,14 +129,11 @@ write_verilog -noattr ./output/post_synth_sim/vsdbabysoc.synth.v
 ### 📸 Snapshots
 
 * 🧩 **Design Hierarchy:**  
-  <img src="Images/Task1_Design_hierarchy.png" alt="Design Hierarchy" width="500"/>
+  <img src="./IMAGES/dhierarchy.png"  width="300"/>
 * ⚙️ **After ABC Mapping:**  
-  <img src="Images/Task1_after_abc_vsdbaby.png" alt="ABC Mapping" width="500"/>
+  <img src="./IMAGES/abc.png"  width="300"/>
 * 📊 **Module Stats:**  
-  <img src="./IMAGES/pstat.png"  width="320"/>
-  <img src="./IMAGES/dihierarchy.png"  width="320"/>
-  <img src="./IMAGES/designflow.png" width="320"/>
-
+  <img src="./IMAGES/pstat.png"  width="500"/>
 ---
 
 ## 🧪 Post-Synthesis Simulation Flow
@@ -138,7 +145,7 @@ write_verilog -noattr ./output/post_synth_sim/vsdbabysoc.synth.v
 | **3️⃣ Run Simulation** | `./post_synth_sim.out` | Execute the compiled simulation binary |
 | **4️⃣ View Waveforms** | `gtkwave post_synth_sim.vcd` | Open simulation waveforms in GTKWave |
 
- <img src="./IMAGES/postsynth.png"  width="500"/>
+ <img src="./IMAGES/postsynth.png"  width="800"/>
 
 
 ---
@@ -151,8 +158,8 @@ write_verilog -noattr ./output/post_synth_sim/vsdbabysoc.synth.v
 | ⚡ Post-Synthesis (GLS) | Structural | Checks real gate-level timing and logic | `post_synth_sim.vcd` |
 
 
- <img src="./IMAGES/postsynth.png"  width="600"/>
- <img src="./IMAGES/presynth1.png"  width="600"/>
+ <img src="./IMAGES/postsynth.png"  width="800"/>
+ <img src="./IMAGES/presynth1.png"  width="800"/>
 
 ---
 
@@ -438,9 +445,6 @@ pin (GND#2) {
 */
 ```
 
-<p align="center">
-  <img src="Images/Task3_vsd_babay_slack.png" alt="Slack Example" width="500"/>
-</p>
 
 ---
 
@@ -509,11 +513,13 @@ docker run -it -v $HOME:/data opensta /data/VLSI/VSDBabySoC/OpenSTA/examples/Bab
 
 ## 6️⃣ Timing Summary & Visualizations
 
-| Metric | Visualization |
-|:-------|:--------------|
-| Worst Hold Slack and Worst Setup Slack | 
-|<img src="./IMAGES/whandws.png"  width="300"/>|
-| Combined STA Metrics |  |<img src="./IMAGES/combined_analysis.png"  width="300"/>|
+## Metric and Visualization
+
+# Worst Hold Slack and Worst Setup Slack  
+<img src="./IMAGES/whandws.png"  width="600"/>
+
+# Combined STA Metrics  
+<img src="./IMAGES/combined_analysis.png"  width="600"/>
 
 ---
 
