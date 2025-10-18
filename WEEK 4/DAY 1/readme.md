@@ -1,32 +1,38 @@
-# Day 4: CMOS Inverter Noise Margin Analysis
+# 📘 Week 4 - Day 1: Introduction to SPICE Simulation
 
-## 🔍 Objective
-To analyze the **noise margins** of a **CMOS inverter** using SPICE simulation with specified device parameters and capacitive load.
+## 🔍 What is SPICE?
+- **SPICE** stands for **Simulation Program with Integrated Circuit Emphasis**.  
+- It is a **circuit simulation tool** used to analyze and verify electronic circuit behavior before fabrication.  
+- Widely used in **analog and digital circuit design**, especially for **CMOS technology**.
 
----
+## ⚙️ Why SPICE is Important in CMOS Circuit Design
+- Helps **model transistor-level behavior** accurately (MOSFET characteristics).  
+- Allows **verification of voltage, current, and timing** responses under different conditions.  
+- Detects **design errors early** — saves cost and time before physical implementation.  
+- Enables **parametric analysis** (like varying supply voltage, temperature, or transistor size).  
+- Supports **DC, AC, and Transient simulations** to observe steady-state and dynamic responses.  
 
-## ⚙️ Device Parameters
-- **Technology:** Sky130 (1.8 V)
-- **PMOS Width (Wp):** 1 µm  
-- **NMOS Width (Wn):** 0.36 µm  
-- **Load Capacitance (CL):** 50 fF  
+## 🧩 Applications
+- Used for **inverter, amplifier, and logic gate analysis**.  
+- Essential in **VLSI and mixed-signal design** workflows.  
+- Helps in **characterizing performance** (e.g., delay, power, gain, noise margin).
 
----
+## 🔬 lab work 
+### N-FET characteristics
+- To observe how the drain current (ID) varies with drain-source voltage (VDS) for a fixed gate-source voltage (VGS).
 
-## 🧪 Analysis
-- Perform a **DC sweep** of input voltage (**Vin**) from 0 V to 1.8 V.  
-- Observe the **Voltage Transfer Characteristics (VTC)** curve to determine:
-  - **VOH (logic high output voltage)**  
-  - **VOL (logic low output voltage)**  
+```bash
+ngspice day1_nfet_idvds_L2_W5.spice
+plot -vdd#branch
+```
 
 <img src="./IMAGES/30.png" width="550">
 
-**Key Observations:**  
-- For **Vin < ~0.7 V**, **Vout ≈ 1.8 V** → Output is logic **‘1’**.  
-- For **Vin > ~1.0 V**, **Vout ≈ 0 V** → Output is logic **‘0’**.
+- x-axis -> Vds | y-axis -> Id | each red line has a different Vgs value 
+
+## 🧠 Summary
+SPICE simulation is a powerful tool that bridges the gap between **theory and real circuit behavior**, making it a cornerstone in **CMOS and VLSI design verification**.  
+It also helps in **analyzing transistor characteristics**, such as plotting **VDS vs ID** curves for different **VGS** values in an **NMOS transistor**, which illustrates how the device operates in **linear and saturation regions**.
 
 ---
 
-## 🧠 Summary
-This experiment focuses on finding the **noise margins** of the CMOS inverter, which define its **tolerance to input noise** while maintaining correct logic levels.  
-The results show clear **switching regions** and help determine **NMH** and **NML**, essential for ensuring **robust digital circuit operation**.
