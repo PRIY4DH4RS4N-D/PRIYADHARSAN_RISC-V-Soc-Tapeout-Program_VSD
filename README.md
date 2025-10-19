@@ -6,11 +6,12 @@
 ██║     ██║  ██║██║██████╔╝██║  ██║╚██████╔╝
 ╚═╝     ╚═╝  ╚═╝╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝
 -->
-<div align="center">
-  
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=105&section=header&text=RISC-V%20Reference%20SoC%20Tapeout%20Program%20VSD&fontSize=38&fontAlign=50&fontColor=F7F7F7" width="100%">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Mono&size=28&pause=1200&color=FFB300&center=true&vCenter=true&width=800&lines=RTLDesign+%E2%9E%9E+Synthesis+%E2%9E%9E+PhysicalDesign+%E2%9E%9E+Tapeout" alt="pipeline" />
+<div align="center">
+
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=105&section=header&text=RISC-V+SoC+Tapeout+Program+VSD&fontSize=38&fontColor=F7F7F7" width="100%">
+
 
 <p>
   <img src="https://img.shields.io/badge/RISC--V-SoC%20Tapeout-1976d2?style=for-the-badge&logo=riscv"/>
@@ -18,6 +19,7 @@
   <img src="https://img.shields.io/badge/Participants-3500%2B-43a047?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Made%20in-India-fcba03?style=for-the-badge"/>
 </p>
+
 </div>
 
 ---
@@ -38,82 +40,59 @@
 
 ---
 
-## 🧭 Quick Nav
 
-- **WEEK 0 SETUP&TOOLS**
-- **PROGRAM VISION**
-- **PROGRESS BOARD**
----
+## 📝 Repo Overview
 
-## 🗓️ Week 0 — Setup & Tools
+This repository captures the **hands-on journey of building, simulating, synthesizing, and analyzing a minimal RISC-V SoC** (BabySoC) using **open-source tools** and **Sky130 PDK technology**.  
+It spans **RTL design**, **Gate-Level Simulation (GLS)**, **Static Timing Analysis (STA)**, and **CMOS circuit-level experiments**, bridging **digital hardware design** with **device physics and timing analysis**.
 
-<details>
-<summary><b>🛠️ FOUNDATION WEEK: EDA ENVIRONMENT BOOTSTRAP</b></summary>
-
-### 🚀 Mission:  
-_Launch a full-featured open-source EDA workspace to power the journey from Verilog to Silicon!_
+**Tools & Frameworks Used:**
+- **RTL & Simulation:** Verilog, Icarus Verilog, GTKWave  
+- **Synthesis & GLS:** Yosys, ABC, OpenSTA  
+- **Technology:** Sky130 PDK, Standard Cell Libraries  
+- **SPICE Analysis:** NMOS/CMOS characterization, transient simulations
 
 ---
 
-#### 📝 **Task Table**
+## 📅 Week-wise Summary
 
-| #   | Task | Tools Involved | Status |
-|-----|------|----------------|--------|
-| 0   | [Complete EDA Toolchain Installation](https://github.com/TheVoltageVikingRam/RTL2GDS_Alchemy/tree/main/Week0) | All Core Tools | ✅ Done |
-
----
-
-#### 🧰 **My EDA Toolbox**
-
-**Core RTL Design & Synthesis**
-| Tool           | Role/Purpose                | Verified |
-|----------------|----------------------------|----------|
-| Yosys          | Synthesis, Logic Optimization | ✔️ |
-| Iverilog       | Verilog Simulation, Compilation | ✔️ |
-| GTKWave        | Waveform Viewer             | ✔️ |
-| Ngspice        | Analog & Mixed-Signal Sim   | ✔️ |
-| Magic VLSI     | Layout, DRC                 | ✔️ |
+| Week | Focus Area | Key Achievements |
+|------|------------|-----------------|
+| **Week 1** | RTL Design & Simulation | - Learned Verilog basics<br>- Simulated MUX, DEMUX, RCA<br>- Gate-level synthesis using Yosys<br>- Identified RTL coding pitfalls (blocking/non-blocking, sensitivity lists, incomplete if/case) |
+| **Week 2** | Minimal SoC Integration | - Set up VSDBabySoC environment<br>- Verified RVMYTH CPU, PLL, DAC<br>- Pre-synthesis simulations and waveform analysis<br>- RTL-to-Verilog TLV conversion |
+| **Week 3** | Gate-Level Simulation & STA | - Post-synthesis functional verification<br>- Gate-level simulations with SDF delays<br>- Timing checks using OpenSTA across PVT corners<br>- Slack analysis, setup/hold checks, timing reports |
+| **Week 4** | CMOS Device Characterization | - NMOS I-V curves, threshold extraction<br>- CMOS inverter analysis and VTC<br>- Noise margin calculation (NML/NMH)<br>- Variation studies (Vdd scaling, W/L ratio)<br>- STA correlation with device-level behavior |
 
 ---
 
-#### 🌟 **Week 0 Highlights**
+## ✅ Overall Checklist of Completed Tasks
 
-- 🔥 **All open-source EDA tools up and running!**
-- 🐳 **Dockerized OpenLane for reproducible, robust flows**
-- 🖥️ **System tuned for heavy EDA workloads**
-- 🏗️ **Ready for RTL → GDSII experiments**
-</details>
-
----
-
-
-## 🎯 Program Objectives & Scope
-
-| 🌐 Aspect          | 💡 Details                                                   |
-|--------------------|-------------------------------------------------------------|
-| 🎓 Learning Path   | SoC: RTL → Synthesis → Physical Design → Tapeout            |
-| 🛠️ Tools Focus    | 100% Open-Source (Yosys, OpenLane, Magic, etc.)              |
-| 🏭 Industry Relevance | True-to-life, professional chip design flows           |
-| 🤝 Collaboration   | India’s largest RISC-V tapeout, 3500+ contributors          |
-| 🇮🇳 National Impact | Building India’s vibrant semiconductor ecosystem            |
+- [x] **RTL Design**: MUX, RCA, blocking/non-blocking labs  
+- [x] **Simulation**: Icarus Verilog, GTKWave waveform verification  
+- [x] **Synthesis**: Yosys synthesis, ABC mapping, post-processing  
+- [x] **Gate-Level Simulation**: GLS with delays, verification against RTL  
+- [x] **Static Timing Analysis**: Setup/Hold checks, slack reports, PVT corners  
+- [x] **BabySoC Integration**: RVMYTH CPU, DAC, PLL functional verification  
+- [x] **TL-Verilog Conversion**: TLV → Verilog for CPU core  
+- [x] **CMOS Device Analysis**: I-V curves, threshold extraction, VTC, delay, noise margins  
+- [x] **Variation Studies**: W/L ratio, Vdd scaling, environmental effects  
+- [x] **Documentation**: Annotated plots, summary tables, weekly reports  
 
 ---
 
+## 📂 Repo Structure
 
-## 🙏 Acknowledgment
+```txt
+VSDBabySoC/
+├── Week1_RTL/            # RTL design, simulation, synthesis examples
+├── Week2_SoC/            # BabySoC setup, TLV→Verilog conversion, DAC/PLL tests
+├── Week3_GLS_STA/        # Gate-level simulation, OpenSTA timing analysis
+├── Week4_CMOS/           # SPICE simulations, inverter analysis, variation studies
+├── Images/               # Waveforms, netlists, STA plots
+├── References.md         # External tutorials, libraries, tool links
+└── README.md             # Overview & progress tracker
 
-> **Salute to [Kunal Ghosh](https://github.com/kunalg123) and the [VSD Team](https://vsdiat.vlsisystemdesign.com/) for pioneering this collective silicon journey.**
-
----
-
-## 📈 Weekly Progress Tracker
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Week%200-Tools%20Setup-success?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Week%201-Coming%20Soon-lightgrey?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Week%202-Upcoming-lightgrey?style=flat-square"/>
-</p>
-
+```
 
 ## 🔗 Program Links
 
@@ -122,8 +101,6 @@ _Launch a full-featured open-source EDA workspace to power the journey from Veri
   <a href="https://riscv.org/"><img src="https://img.shields.io/badge/RISC--V-International-43a047?style=for-the-badge"/></a>
   <a href="https://efabless.com/"><img src="https://img.shields.io/badge/Efabless-Platform-f4511e?style=for-the-badge"/></a>
 </p>
-
----
 
 <div align="center">
 
