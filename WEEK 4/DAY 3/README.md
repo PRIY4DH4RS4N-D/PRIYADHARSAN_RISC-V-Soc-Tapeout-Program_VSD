@@ -2,23 +2,19 @@
 
 ## CMOS Switching threshold and and dynamic simulations
 
-### 📚 Contents
-
-- [Voltage Transfer Characteristics and Spice simulations](#voltage-transfer-characteristics-and-spice-simulations)
-- [Labs Sky130 SPICE simulation for CMOS](#labs-sky130-spice-simulation-for-cmos)
-  - [Comparison of Voltage Transfer Characteristics (.dc) vs. Transient Response (.tran) Simulations](#comparison-of-voltage-transfer-characteristics-dc-vs-transient-response-tran-simulations)
-- [Static behavior evaluation — CMOS inverter robustness — Switching threshold voltage](#static-behavior-evaluation--cmos-inverter-robustness--switching-threshold-voltage)
-
 ### `Voltage Transfer Characteristics and Spice simulations`
 
 #### CMOS Inverter SPICE Deck
 
 This image illustrates how to construct a SPICE deck for a CMOS inverter.
 
-- **Component Connectivity**: Define how PMOS (M1), NMOS (M2), power supply (Vdd), ground (Vss), input (Vin), and output (Vout) are connected.
-- **Component Values**: Specify transistor dimensions (W/L), supply voltages (e.g., 2.5V), and load capacitance (Cload = 10fF).
-- **Identify Nodes**: Recognize each node in the circuit — such as `in`, `out`, `vdd`, `vss`, and transistor terminals.
-- **Name Nodes**: Assign clear names to all nodes for ease of reference during simulation and result interpretation.
+- **Component Connectivity**: Define in detail how each component in the circuit is interconnected. The PMOS transistor (M1) has its source terminal connected to the power supply (Vdd), its drain terminal connected to the output node (Vout), and its gate terminal connected to the input node (Vin). The NMOS transistor (M2) has its source terminal connected to ground (Vss), its drain terminal connected to the same output node (Vout) as M1, and its gate terminal also connected to the input node (Vin). The power supply (Vdd) provides the required biasing voltage for the PMOS, while the ground (Vss) serves as the reference potential. The input (Vin) acts as the control signal applied to both transistor gates, and the output (Vout) is taken from the common drain connection of M1 and M2. This configuration forms a basic CMOS inverter structure, where the output switches between high and low depending on the input logic level.
+
+- **Component Values**: Specify all electrical parameters associated with each component. For the PMOS transistor (M1), use a channel width-to-length ratio (W/L) of 2µm/0.25µm, while for the NMOS transistor (M2), use W/L = 1µm/0.25µm to ensure symmetrical rise and fall times. The power supply voltage (Vdd) is set to 2.5V to provide sufficient headroom for digital logic operation. The ground (Vss) is at 0V, serving as the reference potential. The load capacitance (Cload) connected at the output node (Vout) is 10fF, representing the parasitic and external load effects that influence signal transition speed and delay characteristics. These parameters define the electrical performance of the CMOS inverter and ensure realistic simulation results.
+
+- **Identify Nodes**: Recognize and clearly distinguish every node present in the circuit for accurate analysis. The primary nodes include the **input node (Vin)** where the driving signal is applied, the **output node (Vout)** where the inverter response is observed, the **power supply node (Vdd)** providing the high-level voltage, and the **ground node (Vss)** acting as the low-level reference point. Additionally, internal transistor nodes correspond to the **drain, source, and gate terminals** of both PMOS and NMOS devices. For M1, the gate connects to `Vin`, the drain connects to `Vout`, and the source connects to `Vdd`. For M2, the gate connects to `Vin`, the drain connects to `Vout`, and the source connects to `Vss`. Recognizing these nodes ensures correct connectivity and proper node referencing during circuit simulation.
+
+- **Name Nodes**: Assign clear and consistent names to all nodes to simplify circuit interpretation and simulation output tracking. Label the **input node** as `vin`, the **output node** as `vout`, the **power supply node** as `vdd`, and the **ground node** as `vss`. The internal terminals can be referred to as `m1_gate`, `m1_drain`, `m1_source`, `m2_gate`, `m2_drain`, and `m2_source` for the respective transistors. These standardized node names facilitate easier debugging, waveform analysis, and SPICE netlist generation. Consistent node labeling is crucial for maintaining clarity in schematic diagrams, test benches, and simulation result interpretations.
 
 This forms the foundation of writing an accurate and functional SPICE netlist for CMOS circuit simulations.
 
