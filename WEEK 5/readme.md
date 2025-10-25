@@ -55,7 +55,7 @@ make
 make gui_final
 ```
 
-![im2](im2.png)
+![GUI](GUI.png)
 
 ### 🔍 GUI Highlights
 - Floorplan successfully generated for the `gcd` design block  
