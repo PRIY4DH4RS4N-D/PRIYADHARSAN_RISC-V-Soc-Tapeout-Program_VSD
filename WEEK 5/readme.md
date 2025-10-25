@@ -38,7 +38,6 @@ source ./env.sh
 openroad -help
 ```
 
-![im1](im1.png)
 
 ---
 
