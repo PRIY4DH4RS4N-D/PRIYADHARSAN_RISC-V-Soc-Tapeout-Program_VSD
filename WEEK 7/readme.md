@@ -51,11 +51,11 @@ openroad -help
 cd flow
 make
 ```
-<img src="./images/1.jpg" width="550">
-<img src="./images/2.jpg" width="550">
-<img src="./images/3.jpg" width="550">
-<img src="./images/4.jpg" width="550">
-<img src="./images/5.jpg" width="550">
+<img src="./images/1.png" width="550">
+<img src="./images/2.png" width="550">
+<img src="./images/3.png" width="550">
+<img src="./images/4.png" width="550">
+<img src="./images/5.png" width="550">
 ---
 
 ## 📁 Directory Structure Setup for VSDBabySoC
@@ -155,7 +155,7 @@ source env.sh
 cd flow
 make
 ```
-<img src="./images/6.jpg" width="550">
+<img src="./images/6.png" width="550">
 **Verification:**
 - ✅ Yosys installed and working
 - ✅ OpenROAD binaries compiled successfully  
@@ -170,11 +170,11 @@ make
 ```bash
 ./build_openroad.sh --local
 ```
-<img src="./images/7.jpg" width="550">
-<img src="./images/8.jpg" width="550">
-<img src="./images/9.jpg" width="550">
-<img src="./images/10.jpg" width="550">
-<img src="./images/11.jpg" width="550">
+<img src="./images/7.png" width="550">
+<img src="./images/8.png" width="550">
+<img src="./images/9.png" width="550">
+<img src="./images/10.png" width="550">
+<img src="./images/11.png" width="550">
 **Output:**
 - ✅ OpenROAD compiled from source
 - ✅ All tools integrated into flow
@@ -197,10 +197,10 @@ openroad -help
 - ✅ OpenROAD help accessible
 - ✅ Environment properly set up
 
-<img src="./images/12.jpg" width="550">
-<img src="./images/13.jpg" width="550">
-<img src="./images/14.jpg" width="550">
-<img src="./images/15.jpg" width="550">
+<img src="./images/12.png" width="550">
+<img src="./images/13.png" width="550">
+<img src="./images/14.png" width="550">
+<img src="./images/15.png" width="550">
 
 ---
 
@@ -245,8 +245,8 @@ OpenROAD-flow-scripts/
 ├── etc/              # Installers, dependency scripts
 └── setup_env.sh      # Environment setup
 ```
-<img src="./images/16.jpg" width="550">
-<img src="./images/17.jpg" width="550">
+<img src="./images/16.png" width="550">
+<img src="./images/17.png" width="550">
 **Flow Directory:**
 ```
 flow/
@@ -256,12 +256,12 @@ flow/
 ├── tutorials/        # Training references
 └── util/             # Helper scripts
 ```
-<img src="./images/18.jpg" width="550">
-<img src="./images/19.jpg" width="550">
-<img src="./images/20.jpg" width="550">
-<img src="./images/21.jpg" width="550">
-<img src="./images/22.jpg" width="550">
-<img src="./images/23.jpg" width="550">
+<img src="./images/18.png" width="550">
+<img src="./images/19.png" width="550">
+<img src="./images/20.png" width="550">
+<img src="./images/21.png" width="550">
+<img src="./images/22.png" width="550">
+<img src="./images/23.png" width="550">
 
 
 ---
@@ -273,9 +273,9 @@ flow/
 - ✅ Analog Macros: `avsddac`, `avsdpll` (LEF/GDS/LIB)
 - ✅ Configuration: `config.mk`, `macro.cfg`, `pin_order.cfg`
 - ✅ Constraints: `vsdbabysoc_synthesis.sdc`
-<img src="./images/24.jpg" width="550">
-<img src="./images/25.jpg" width="550">
-<img src="./images/26.jpg" width="550">
+<img src="./images/24.png" width="550">
+<img src="./images/25.png" width="550">
+<img src="./images/26.png" width="550">
 
 ---
 
@@ -293,12 +293,12 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk synth
 - ✅ Timing estimation
 - ✅ Cell usage statistics
 - 
-<img src="./images/27.jpg" width="550">
-<img src="./images/28.jpg" width="550">
-<img src="./images/29.jpg" width="550">
-<img src="./images/30.jpg" width="550">
-<img src="./images/31.jpg" width="550">
-<img src="./images/32.jpg" width="550">
+<img src="./images/27.png" width="550">
+<img src="./images/28.png" width="550">
+<img src="./images/29.png" width="550">
+<img src="./images/30.png" width="550">
+<img src="./images/31.png" width="550">
+<img src="./images/32.png" width="550">
 
 ---
 
@@ -319,8 +319,8 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_floorplan
 - ✅ Macro placement configuration
 - ✅ Power grid generation
 
-<img src="./images/33.jpg" width="550">
-<img src="./images/34.jpg" width="550">
+<img src="./images/33.png" width="550">
+<img src="./images/34.png" width="550">
 
 ---
 
@@ -343,11 +343,11 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_place
 - 📌 Placement Density
 - 📌 Power Density Analysis
 
-<img src="./images/35.jpg" width="550">
-<img src="./images/36.jpg" width="550">
+<img src="./images/35.png" width="550">
+<img src="./images/36.png" width="550">
 
-<img src="./images/37.jpg" width="550">
-<img src="./images/38.jpg" width="550">
+<img src="./images/37.png" width="550">
+<img src="./images/38.png" width="550">
 
 
 ---
@@ -368,10 +368,10 @@ make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk gui_cts
 - ✅ Buffer insertion for signal integrity
 - ✅ Skew optimization across clock domains
 - ✅ CTS timing reports and analysis
-<img src="./images/39.jpg" width="550">
-<img src="./images/40.jpg" width="550">
+<img src="./images/39.png" width="550">
+<img src="./images/40.png" width="550">
 
-<img src="./images/41.jpg" width="550">
+<img src="./images/41.png" width="550">
 
 
 ---
