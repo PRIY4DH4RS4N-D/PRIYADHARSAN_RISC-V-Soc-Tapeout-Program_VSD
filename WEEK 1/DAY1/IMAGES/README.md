@@ -7,11 +7,7 @@
 ╚═╝     ╚═╝  ╚═╝╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝
 -->
 
-<div align="center">
-
-═══════════════════════════════════════════════  
-**DAY 1: RTL DESIGN & SYNTHESIS – INTRODUCTION**  
-═══════════════════════════════════════════════
+# **DAY 1: RTL DESIGN & SYNTHESIS – INTRODUCTION** 
 
 <span>
   <b>Yosys</b> <kbd>Synthesis</kbd> • <b>Icarus Verilog</b> <kbd>Simulation</kbd> • <b>GTKWave</b> <kbd>Waveform Analysis</kbd>
